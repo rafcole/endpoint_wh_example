@@ -48,7 +48,9 @@ app.post('/bin/:id', (req, res) => {
 
 // display all request data received at this entry point
 app.get('/bin/:id/requests', (req, res) => {
-  res.send('Hello World!')
+  var id = req.params.id;
+
+  res.send("request from " + id + " blah")
 })
 
 // create new endpoint

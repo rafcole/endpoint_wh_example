@@ -3,41 +3,6 @@ const app = express()
 const port = 8000
 app.use(express.json())
 
-// const db = require('./mongo.js')
-
-// const mongo = require('mongodb');
-// const client = new mongo.MongoClient('mongodb://localhost:27017', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// var db;
-// // var animals;
-// client.connect(() => {
-//   db = client.db('test');
-//   animals = db.collection('test2');
-//   console.log('mongoDB connected')
-// });
-
-
-// addAnimal = () => {
-//   const animalName = prompt('Name: ');
-//   const ageAnimal = prompt('Age: ');
-//   animals.insertOne(
-//     {
-//       nameAnimal: animalName,
-//       age: ageAnimal,
-//     },
-//     (err) => {
-//       if (err) {
-//         console.log('Error');
-//       } else {
-//         console.log('Added!');
-//       }
-//     }
-//   );
-// };
-// addAnimal()
 
 const {MongoClient} = require('mongodb');
 let db;

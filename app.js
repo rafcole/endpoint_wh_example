@@ -5,6 +5,7 @@ app.use(express.json())
 
 
 const {MongoClient} = require('mongodb');
+const { MongoClient } = require("mongodb");
 let db;
 
 async function main() {

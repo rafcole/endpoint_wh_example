@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 8000
+const path = require("path")
 app.use(express.json())
 
 
@@ -79,6 +80,12 @@ app.get('/bin/:id/requests', (req, res) => {
   // return formatted entrypoint
 app.get('/new', (req, res) => {
   res.send('Hello World!')
+})
+
+app.use(express.static("build"))
+
+app.get("*", (req,res)=> {
+  res.sendFile(path.join(__dirname, "build", "index.html"))
 })
 
 app.listen(port, () => {

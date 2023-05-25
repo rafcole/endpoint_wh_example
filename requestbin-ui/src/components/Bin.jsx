@@ -81,7 +81,8 @@ const Bin = () => {
 
   useEffect(() => {
     const fetchRequests = async () => {
-      const response = await axios.get(`${baseUrl}/api/bin/${binId}`);
+      // const response = await axios.get(`${baseUrl}/api/bin/${binId}`);
+      const response = await axios.get(`${baseUrl}/requests`);
       console.log(response.data);
 
       if (Array.isArray(response.data)) {
